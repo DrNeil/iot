@@ -108,7 +108,7 @@ bitmap.Save("/home/pi/yuyv_to_jpg.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
 // Get the supported formats of the device
 IEnumerable<PixelFormat> formats = device.GetSupportedPixelFormats();
 // Get the resolutions of the format
-IEnumerable<(uint Width, uint Height)> resolutions = device.GetPixelFormatResolutions(PixelFormat.YUYV));
+IEnumerable<Resolution> resolutions = device.GetPixelFormatResolutions(PixelFormat.YUYV));
 // Query v4l2 controls default and current value
 VideoDeviceValue value = device.GetVideoDeviceValue(VideoDeviceValueType.Rotate);
 ```
